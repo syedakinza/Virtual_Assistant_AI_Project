@@ -48,4 +48,19 @@ def sendEmail(to, content):
         server.login('kinza.fatima2511@yahoo.com', 'here my password')
         server.sendmail('kinza.fatima2511@yahoo.com', to, content)
         server.close()
+if __name__ == "__main__":
+    wishMe()
+    while True:
+            query = takecommand().lower()
+
+            if 'open youtube' in query:
+                webbrowser.open("youtube.com")
+            elif 'open whatsapp' in query:
+                webbrowser.open("https://web.whatsapp.com/")
+            elif 'open google' in query:
+                webbrowser.open("google.com")
+            elif 'open gamil' in query:
+                webbrowser.open("gmail.com")
+            elif 'open facebook' in query:
+                webbrowser.open("facebook.com")
 
