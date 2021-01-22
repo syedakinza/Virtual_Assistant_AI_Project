@@ -1,0 +1,15 @@
+            elif 'show weather' in query:
+                webbrowser.open("accuweather.com")
+
+            elif 'send email' in query:
+                try:
+                    speak("What should I say sir?")
+                    content = takecommand()
+                    to = "syedazehra4407@gmail.com"
+                    sendEmail(to, content)
+                    speak("Email has been sent to Zehra successfully!")
+                except Exception as e:
+                    print(e)
+                    speak("Sorry sir I am not able to send this email")
+            elif 'thanks' in query:
+                break
