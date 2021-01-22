@@ -1,0 +1,29 @@
+elif 'play music' in query:
+                music_dir = 'F:\Songs'
+                songs = os.listdir(music_dir)
+                print(songs)
+                os.startfile(os.path.join(music_dir, songs[0]))
+
+            elif 'tell me the time' in query:
+                strTime = datetime.datetime.now().strftime("%H:%M:%S")
+                speak(f"Sir, the time is {strTime}")
+                print(strTime)
+            elif 'tell me the date' in query:
+                today = date.today()
+                strdate = today.strftime("%D:%M:%Y")
+                speak(f"Sir, the date is {strdate}")
+                print(strdate)
+            elif 'tell me the day' in query:
+                now = datetime.datetime.now()
+                strday= now.strftime("%A")
+                speak(f"Sir, the day is {strday}")
+                print(strday)
+
+            elif 'open word' in query:
+                wordPath = "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Microsoft Office 2013\\Word 2013"
+                os.startfile(wordPath)
+            elif 'open excel' in query:
+                excelPath = "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Microsoft Office 2013\\Excel 2013"
+                os.startfile(excelPath)
+            elif 'open powerpoint' in query:
+                pptPath = "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Microsoft Office 2013\\PowerPoint 2013"
