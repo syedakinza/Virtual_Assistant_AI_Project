@@ -25,7 +25,7 @@ def wishMe():
     else:
         speak("Good Evening")
     speak("I Am Your Assistant Sir. Please Tell Me How May I Help You")
-    
+
 def takecommand():
     r = sr.Recognizer()
     with sr.Microphone() as source:
@@ -40,3 +40,12 @@ def takecommand():
         speak("Sir Say That Again Please...")
         return "None"
     return  query
+
+def sendEmail(to, content):
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.ehlo()
+        server.starttls()
+        server.login('kinza.fatima2511@yahoo.com', 'here my password')
+        server.sendmail('kinza.fatima2511@yahoo.com', to, content)
+        server.close()
+
